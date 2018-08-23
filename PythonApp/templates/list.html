@@ -1,0 +1,50 @@
+<head>
+<style>
+
+</style>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+$('div').click(function(event){
+  var x = $(this).text();
+  alert(x);
+});
+function getvalue(a){
+	
+	alert(a.innerHTML);
+	open();
+	
+}
+ function open() {
+      alert('Hello');
+  }
+</script>
+</head>
+<div id="main">
+<table>
+        
+        {% for row in r %}
+                <tr>
+				<script>
+				var newdiv = document.createElement("div");
+				newdiv.style["height"] = "100px";
+				newdiv.style["width"] = "500px";
+				//newdiv.style["float"] = "left";
+				newdiv.innerHTML = '<td><a onclick="getvalue(this);">{{row[0]}} {{ row[1] }}</a></td></br>';
+				//alert("ewff");
+				document.getElementById("main").appendChild(newdiv);
+				</script>
+				
+				
+				
+				
+					  
+                </tr>
+				
+        {% endfor %}
+</table>
+</div>
+<span id="myBtnfb"
+    class="demo" onclick="open()">
+    <span class="icon">&nbsp;</span>
+    <span class="">Testing</span>
+</span> 

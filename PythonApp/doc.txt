@@ -1,0 +1,2 @@
+1 - Install anaconda 3 on the machine.
+2 - open app.py as the source file.
